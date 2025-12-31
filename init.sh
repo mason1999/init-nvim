@@ -7,5 +7,19 @@ curl -Lo "${PATH_DIR}/nvim-linux-x86_64.tar.gz" "https://github.com/neovim/neovi
 pushd "${PATH_DIR}"
 tar -xzvf "nvim-linux-x86_64.tar.gz"
 ln -sT "./nvim-linux-x86_64/bin/nvim" "nvim"
+cat <<'EOF'
+nnoremap <C-h> <C-w>h
+nnoremap <C-j> <C-w>j
+nnoremap <C-k> <C-w>k
+nnoremap <C-l> <C-w>l
+
+nnoremap <silent> <C-Up> :resize +5<CR>
+nnoremap <silent> <C-Down> :resize -5<CR>
+nnoremap <silent> <C-Left> :vertical resize -5<CR>
+nnoremap <silent> <C-Right> :vertical resize +5<CR>
+
+set helpbelow
+
+EOF
 popd
 echo "DONE!"
