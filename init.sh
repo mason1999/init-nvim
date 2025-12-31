@@ -26,7 +26,7 @@ tnoremap <silent> <C-h> <C-\><C-n><C-w>l
 
 augroup HelpBelow
   autocmd!
-  autocmd Filetype help winmcd J
+  autocmd Filetype help wincmd J
 augroup END
 
 EOF
