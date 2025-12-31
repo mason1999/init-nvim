@@ -19,7 +19,15 @@ nnoremap <silent> <C-Down> :resize -5<CR>
 nnoremap <silent> <C-Left> :vertical resize -5<CR>
 nnoremap <silent> <C-Right> :vertical resize +5<CR>
 
-set helpbelow
+tnoremap <silent> <C-h> <C-\><C-n><C-w>h
+tnoremap <silent> <C-h> <C-\><C-n><C-w>j
+tnoremap <silent> <C-h> <C-\><C-n><C-w>k
+tnoremap <silent> <C-h> <C-\><C-n><C-w>l
+
+augroup HelpBelow
+  autocmd!
+  autocmd Filetype help winmcd J
+augroup END
 
 EOF
 popd
