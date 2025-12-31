@@ -7,7 +7,8 @@ curl -Lo "${PATH_DIR}/nvim-linux-x86_64.tar.gz" "https://github.com/neovim/neovi
 pushd "${PATH_DIR}"
 tar -xzvf "nvim-linux-x86_64.tar.gz"
 ln -sT "./nvim-linux-x86_64/bin/nvim" "nvim"
-cat <<'EOF'
+mkdir -p "${HOME}/.config/nvim/" 
+cat <<'EOF' > "${HOME}/.config/nvim/init.vim"
 nnoremap <C-h> <C-w>h
 nnoremap <C-j> <C-w>j
 nnoremap <C-k> <C-w>k
