@@ -20,14 +20,14 @@ nnoremap <silent> <C-Left> :vertical resize -5<CR>
 nnoremap <silent> <C-Right> :vertical resize +5<CR>
 
 tnoremap <silent> <C-h> <C-\><C-n><C-w>h
-tnoremap <silent> <C-h> <C-\><C-n><C-w>j
-tnoremap <silent> <C-h> <C-\><C-n><C-w>k
-tnoremap <silent> <C-h> <C-\><C-n><C-w>l
+tnoremap <silent> <C-j> <C-\><C-n><C-w>j
+tnoremap <silent> <C-k> <C-\><C-n><C-w>k
+tnoremap <silent> <C-l> <C-\><C-n><C-w>l
 
-augroup HelpBelow
-  autocmd!
-  autocmd Filetype help wincmd J
-augroup END
+set splitbelow
+set splitright
+
+noremap <C-b> <C-v>
 
 EOF
 popd
